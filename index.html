@@ -1,19 +1,51 @@
-<!DOCTYPE HTML>
+<!doctype html>
 
 <head>
-	<title>Happy Birthday Erin</title>	
+	<title>Happy Birthday Erin</title>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">	
 	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+
 	<!-- Mobile Support -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-Hey cam
+	<h2>Welcome to Dad Jokes Are My Religion Dot Com</h2>
+	<h3>"We don't say prayers, we drink beers"</h3>
+	<div class="col-sm-5">
+		<img style="margin: auto" src="img/spinny-cross.gif"/>
+		<h3>This is Where You Sign Up</h3>
+		<form>
+			<div class="input-group">
+				<input id="literallytheonlytextbox" type="text" class="form-control" placeholder="Please enter your god damn email">
+				<div class="input-group-btn" onclick="submit()">
+					<button class="btn btn-default" id="literallytheonlybutton" type="submit">
+					<i class="glyphicon glyphicon-ice-lolly-tasted"></i>
+				</button>
+				</div>
+			</div>
+		</form>
+	</div>
 </body>
+
+<script>
+	var reEmail = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
+
+	function submit() {
+		console.log("button pressed");
+		var email = document.getElementById("literallytheonlytextbox").value;
+		if (email==="")
+			alert("Please enter a god damn email");
+		else if (!email.match(reEmail))
+			alert("Invalid email address");
+		else
+			alert("Thank you for signing up");
+	}
+
+</script>
